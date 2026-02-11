@@ -1,0 +1,335 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="description" content="Hawklabs is building the next front in Birds of War. Site under construction." />
+  <title>Hawklabs — Under Construction</title>
+
+  <style>
+    :root{
+      /* AMBER COMMAND (from brand lock) */
+      --amber:#FF9F1A;
+      --gold:#D8A441;
+      --shadow:#1A1E23;
+      --storm:#1F2A38;
+      --steel:#3A3F45;
+      --ash:#6B6E72;
+
+      --bg0: #0b0f14;
+      --bg1: #101824;
+      --card: rgba(26,30,35,.72);
+      --line: rgba(216,164,65,.22);
+      --text: rgba(255,255,255,.86);
+      --muted: rgba(255,255,255,.62);
+    }
+
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0;
+      font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+      color:var(--text);
+      background:
+        radial-gradient(900px 600px at 15% 10%, rgba(31,42,56,.55), transparent 55%),
+        radial-gradient(800px 500px at 85% 25%, rgba(255,159,26,.12), transparent 55%),
+        linear-gradient(180deg, var(--bg1), var(--bg0));
+      overflow-x:hidden;
+    }
+
+    .wrap{
+      max-width:1100px;
+      margin:0 auto;
+      padding:28px 18px 48px;
+    }
+
+    .topbar{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:16px;
+      padding:10px 0 18px;
+    }
+
+    .brand{
+      display:flex;
+      align-items:center;
+      gap:12px;
+      letter-spacing:.12em;
+      text-transform:uppercase;
+      font-weight:800;
+    }
+
+    .dot{
+      width:10px;height:10px;border-radius:50%;
+      background:var(--amber);
+      box-shadow:0 0 14px rgba(255,159,26,.45);
+    }
+
+    .pill{
+      display:inline-flex;
+      align-items:center;
+      gap:10px;
+      padding:8px 12px;
+      border:1px solid var(--line);
+      border-radius:999px;
+      background:rgba(0,0,0,.18);
+      font-size:12px;
+      color:var(--muted);
+      white-space:nowrap;
+    }
+
+    .grid{
+      display:grid;
+      grid-template-columns: 1.1fr .9fr;
+      gap:18px;
+      align-items:start;
+    }
+
+    @media (max-width: 900px){
+      .grid{grid-template-columns:1fr}
+    }
+
+    .card{
+      border:1px solid var(--line);
+      background:var(--card);
+      border-radius:18px;
+      overflow:hidden;
+      box-shadow: 0 18px 60px rgba(0,0,0,.35);
+      backdrop-filter: blur(10px);
+    }
+
+    .hero{
+      padding:22px 22px 18px;
+    }
+
+    .h1{
+      margin:0 0 10px;
+      font-size: clamp(30px, 4vw, 46px);
+      line-height:1.05;
+      letter-spacing:-.02em;
+    }
+
+    .h1 .amber{
+      color:var(--amber);
+      text-shadow:0 0 18px rgba(255,159,26,.28);
+    }
+
+    .sub{
+      margin:0 0 18px;
+      color:var(--muted);
+      font-size:15px;
+      line-height:1.5;
+      max-width:58ch;
+    }
+
+    .ctaRow{
+      display:flex;
+      flex-wrap:wrap;
+      gap:10px;
+      align-items:center;
+      margin-top:10px;
+    }
+
+    .btn{
+      appearance:none;
+      border:none;
+      cursor:pointer;
+      padding:11px 14px;
+      border-radius:12px;
+      font-weight:800;
+      letter-spacing:.04em;
+      text-transform:uppercase;
+      font-size:12px;
+      transition: transform .08s ease, filter .12s ease;
+      display:inline-flex;
+      align-items:center;
+      gap:10px;
+      text-decoration:none;
+    }
+    .btn:active{transform: translateY(1px)}
+    .btnPrimary{
+      color:#121212;
+      background: linear-gradient(180deg, #ffb03a, var(--amber));
+      box-shadow: 0 12px 30px rgba(255,159,26,.18);
+    }
+    .btnGhost{
+      color:var(--text);
+      background:rgba(0,0,0,.12);
+      border:1px solid var(--line);
+    }
+    .btn:hover{filter:brightness(1.05)}
+
+    .imgs{
+      display:grid;
+      grid-template-columns:1fr;
+      gap:12px;
+      padding:14px;
+    }
+
+    .shot{
+      border-radius:14px;
+      overflow:hidden;
+      border:1px solid rgba(255,255,255,.08);
+      background:rgba(0,0,0,.25);
+    }
+
+    .shot img{
+      width:100%;
+      height:auto;
+      display:block;
+    }
+
+    .cap{
+      padding:10px 12px;
+      font-size:12px;
+      color:var(--muted);
+      border-top:1px solid rgba(255,255,255,.06);
+    }
+
+    .side{
+      padding:18px;
+    }
+
+    .kicker{
+      font-weight:900;
+      text-transform:uppercase;
+      letter-spacing:.14em;
+      font-size:12px;
+      color: rgba(255,255,255,.72);
+      margin-bottom:10px;
+      display:flex;
+      align-items:center;
+      gap:10px;
+    }
+
+    .kline{
+      height:1px; flex:1;
+      background:linear-gradient(90deg, rgba(216,164,65,.0), rgba(216,164,65,.35), rgba(216,164,65,.0));
+    }
+
+    .list{
+      margin:0;
+      padding-left:18px;
+      color:var(--muted);
+      line-height:1.55;
+      font-size:14px;
+    }
+
+    .email{
+      margin-top:14px;
+      display:flex;
+      gap:10px;
+      flex-wrap:wrap;
+    }
+
+    .email input{
+      flex:1;
+      min-width:220px;
+      padding:12px 12px;
+      border-radius:12px;
+      border:1px solid rgba(216,164,65,.22);
+      background:rgba(0,0,0,.18);
+      color:var(--text);
+      outline:none;
+    }
+    .email input::placeholder{color:rgba(255,255,255,.45)}
+
+    .footer{
+      margin-top:16px;
+      display:flex;
+      justify-content:space-between;
+      flex-wrap:wrap;
+      gap:10px;
+      color:rgba(255,255,255,.42);
+      font-size:12px;
+      padding:0 6px;
+    }
+
+    .links a{
+      color:rgba(255,255,255,.62);
+      text-decoration:none;
+      margin-right:12px;
+    }
+    .links a:hover{color:var(--amber)}
+  </style>
+</head>
+
+<body>
+  <div class="wrap">
+    <div class="topbar">
+      <div class="brand">
+        <span class="dot"></span>
+        <span>Hawklabs</span>
+      </div>
+      <div class="pill">Status: <strong style="color:#fff">Under Construction</strong> • Amber Command Online</div>
+    </div>
+
+    <div class="grid">
+      <section class="card hero">
+        <h1 class="h1">We’re building the next front in <span class="amber">Birds of War</span>.</h1>
+        <p class="sub">
+          This site is currently being assembled. The war doesn’t wait — so while we construct the hub,
+          you can follow the project and get the first playable drop the moment it’s ready.
+        </p>
+
+        <div class="ctaRow">
+          <!-- Replace # with your real links -->
+          <a class="btn btnPrimary" href="#" target="_blank" rel="noopener">Follow Development</a>
+          <a class="btn btnGhost" href="#" target="_blank" rel="noopener">Wishlist / Demo</a>
+          <a class="btn btnGhost" href="#" target="_blank" rel="noopener">Discord / Updates</a>
+        </div>
+
+        <div class="imgs">
+          <div class="shot">
+            <img src="assets/hawklabs_future_home.png" alt="Hawklabs future home (worksite)" />
+            <div class="cap">The future home — currently under construction.</div>
+          </div>
+
+          <div class="shot">
+            <img src="assets/lost_contact_title.png" alt="Lost Contact key art" />
+            <div class="cap">Mini-game: <strong>Lost Contact</strong> — the first race back to the border.</div>
+          </div>
+
+          <div class="shot">
+            <img src="assets/birds_of_war_keyart.png" alt="Birds of War brand art" />
+            <div class="cap">Brand affiliation — the war is real, the stakes are earned.</div>
+          </div>
+        </div>
+      </section>
+
+      <aside class="card side">
+        <div class="kicker">What’s shipping <span class="kline"></span></div>
+        <ul class="list">
+          <li>Core website hub (news, media, game drops)</li>
+          <li>Press kit + playable builds</li>
+          <li>Short-form hooks that feed missions</li>
+          <li>Email capture + Discord funnel</li>
+        </ul>
+
+        <div class="kicker" style="margin-top:18px;">Get the first drop <span class="kline"></span></div>
+        <!-- Simple placeholder form (no backend). Replace later with Formspree/Mailchimp/etc. -->
+        <form class="email" onsubmit="event.preventDefault(); alert('Hooked. We’ll wire this to email capture next.');">
+          <input type="email" placeholder="you@domain.com" required />
+          <button class="btn btnPrimary" type="submit">Notify Me</button>
+        </form>
+
+        <div class="kicker" style="margin-top:18px;">System message <span class="kline"></span></div>
+        <p class="sub" style="margin:0">
+          <span style="color:var(--amber);font-weight:800">Commander Hawk</span> is inbound.<br/>
+          Communications are down. Contact lost.
+        </p>
+      </aside>
+    </div>
+
+    <div class="footer">
+      <div>© Hawklabs • Birds of War Universe</div>
+      <div class="links">
+        <a href="#" target="_blank" rel="noopener">GitHub</a>
+        <a href="#" target="_blank" rel="noopener">YouTube</a>
+        <a href="#" target="_blank" rel="noopener">X/Twitter</a>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

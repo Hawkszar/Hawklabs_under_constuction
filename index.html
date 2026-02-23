@@ -27,6 +27,7 @@
         <a href="#game">Lost Contact</a>
         <a href="#hawklabs">Hawklabs</a>
         <a href="#contact">Contact</a>
+      
       </nav>
 
       <button class="navbtn" id="navbtn" aria-label="Open menu" aria-expanded="false">☰</button>
@@ -52,6 +53,7 @@
           </p>
 
           <div class="cta">
+            <a class="btn btn--discord" herf ="#discord">Join Discord</a>
             <a class="btn btn--primary" href="#contact">Get Updates</a>
             <a class="btn btn--ghost" href="#game">See the Game</a>
           </div>
@@ -168,7 +170,7 @@
         <h2>Contact &amp; Updates</h2>
         <p class="muted">
           Drop your email for build drops and lore. Or hit the direct email button.
-          (Edit the email address in <code>script.js</code> and <code>index.html</code>.)
+         
         </p>
 
         <div class="contact__grid">
@@ -182,28 +184,23 @@
             <p class="tiny" id="copyStatus" role="status" aria-live="polite"></p>
           </div>
 
-          <form class="contact__card" id="contactForm">
-            <h3>Quick Message</h3>
-            <p class="muted">This uses a mailto fallback (no server). Replace with Formspree/Netlify later if you want.</p>
-            <label>
-              <span>Name</span>
-              <input name="name" autocomplete="name" placeholder="Your name" required />
-            </label>
-            <label>
-              <span>Email</span>
-              <input name="email" type="email" autocomplete="email" placeholder="you@domain.com" required />
-            </label>
-            <label>
-              <span>Message</span>
-              <textarea name="message" rows="4" placeholder="Say hi, ask for a build link, press kit, collab, etc." required></textarea>
-            </label>
-            <button class="btn btn--primary" type="submit">Send</button>
-            <p class="tiny muted">Tip: when you add a real form backend, this instantly becomes a true newsletter signup.</p>
-          </form>
+          <form name="updates" method="POST" data-netlify="true" action="/thanks.html" netlify-honeypot="bot-field">
+  <input type="hidden" name="form-name" value="updates" />
+  <p style="display:none;">
+    <label>Don’t fill this out: <input name="bot-field" /></label>
+  </p>
+
+  <label>
+    <span class="sr-only">Email</span>
+    <input type="email" name="email" placeholder="you@domain.com" required />
+  </label>
+
+  <button type="submit">ENLIST</button>
+</form>
         </div>
 
         <footer class="footer">
-          <div class="footer__left">© <span id="year"></span> Hawklabs. All rights reserved.</div>
+          <div class="footer__left">© <span id="year"></span>© 2026 Hawklabs. All rights reserved.</div>
           <div class="footer__right">
             <a href="#top">Back to top ↑</a>
           </div>

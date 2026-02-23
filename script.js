@@ -1,13 +1,13 @@
 // Hawklabs single-page script (tiny + no dependencies)
 // Edit these two values:
-const HAWKLABS_EMAIL = "Hawklabs.dev@gmail.com"; // <-- change to your real inbox
+// Hawklabs single-page script (tiny + no dependencies)
+const HAWKLABS_EMAIL = "Hawklabs.dev@gmail.com";
 const DEFAULT_SUBJECT = "Hawklabs — Contact / Build / Press";
 
 const emailBtn = document.getElementById("emailBtn");
 const copyBtn = document.getElementById("copyEmailBtn");
 const copyStatus = document.getElementById("copyStatus");
 const year = document.getElementById("year");
-const form = document.getElementById("contactForm");
 
 // Mobile nav toggle
 const navbtn = document.getElementById("navbtn");
@@ -48,20 +48,33 @@ copyBtn?.addEventListener("click", async () => {
   }
 });
 
-// Mailto form fallback (no server)
-form?.addEventListener("submit", (e) => {
+// Updates signup -> Cloudflare Worker (/api/subscribe)
+const updatesForm = document.getElementById("updatesForm");
+const updatesStatus = document.getElementById("updatesStatus");
+
+updatesForm?.addEventListener("submit", async (e) => {
   e.preventDefault();
-  const data = new FormData(form);
-  const name = String(data.get("name") || "").trim();
-  const email = String(data.get("email") || "").trim();
-  const message = String(data.get("message") || "").trim();
 
-  const subject = encodeURIComponent(DEFAULT_SUBJECT);
-  const body = encodeURIComponent(
-    `Name: ${name}\nEmail: ${email}\n\n${message}\n`
-  );
+  const email = String(new FormData(updatesForm).get("email") || "").trim();
+  if (!email) return;
 
-  window.location.href = `mailto:${HAWKLABS_EMAIL}?subject=${subject}&body=${body}`;
+  updatesStatus.textContent = "Sending…";
+
+  try {
+    const res = await fetch("/api/subscribe", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ email, source: "hawklabs.games" }),
+    });
+
+    const data = await res.json().catch(() => ({}));
+    if (!res.ok) throw new Error(data?.error || "Request failed");
+
+    updatesStatus.textContent = "You’re in. Check email for confirmation (if enabled).";
+    updatesForm.reset();
+  } catch (err) {
+    updatesStatus.textContent = "Signup failed. Try again in a moment.";
+  }
 });
 
-year.textContent = String(new Date().getFullYear());
+if (year) year.textContent = String(new Date().getFullYear());

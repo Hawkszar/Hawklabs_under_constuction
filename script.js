@@ -77,4 +77,28 @@ updatesForm?.addEventListener("submit", async (e) => {
   }
 });
 
+<script>
+  // Mobile menu toggle
+  (function(){
+    const btn = document.getElementById('hlMenuBtn');
+    const nav = document.getElementById('hlNav');
+    if (!btn || !nav) return;
+
+    btn.addEventListener('click', () => {
+      const open = nav.classList.toggle('open');
+      btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+      btn.textContent = open ? 'Close' : 'Menu';
+    });
+
+    nav.querySelectorAll('a').forEach(a => {
+      a.addEventListener('click', () => {
+        if (window.innerWidth <= 980) {
+          nav.classList.remove('open');
+          btn.setAttribute('aria-expanded', 'false');
+          btn.textContent = 'Menu';
+        }
+      });
+    });
+  })();
+</script>
 if (year) year.textContent = String(new Date().getFullYear());

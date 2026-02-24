@@ -1,7 +1,5 @@
 // Hawklabs single-page script (tiny + no dependencies)
-// Edit these two values:
-// Hawklabs single-page script (tiny + no dependencies)
-const HAWKLABS_EMAIL = "Hawklabs.dev@gmail.com";
+const HAWKLABS_EMAIL = "hawklabs.dev@gmail.com";
 const DEFAULT_SUBJECT = "Hawklabs — Contact / Build / Press";
 
 const emailBtn = document.getElementById("emailBtn");
@@ -9,21 +7,20 @@ const copyBtn = document.getElementById("copyEmailBtn");
 const copyStatus = document.getElementById("copyStatus");
 const year = document.getElementById("year");
 
-// Mobile nav toggle
+// Mobile nav toggle (current HTML version)
 const navbtn = document.getElementById("navbtn");
 const mobileNav = document.getElementById("mobileNav");
 
 navbtn?.addEventListener("click", () => {
   const isOpen = navbtn.getAttribute("aria-expanded") === "true";
   navbtn.setAttribute("aria-expanded", String(!isOpen));
-  mobileNav.hidden = isOpen;
+  if (mobileNav) mobileNav.hidden = isOpen;
 });
 
-// Close mobile nav on click
-mobileNav?.querySelectorAll("a").forEach(a => {
+mobileNav?.querySelectorAll("a").forEach((a) => {
   a.addEventListener("click", () => {
     mobileNav.hidden = true;
-    navbtn.setAttribute("aria-expanded", "false");
+    navbtn?.setAttribute("aria-expanded", "false");
   });
 });
 
@@ -40,13 +37,20 @@ emailBtn?.setAttribute("href", mailtoHref());
 copyBtn?.addEventListener("click", async () => {
   try {
     await navigator.clipboard.writeText(HAWKLABS_EMAIL);
-    copyStatus.textContent = "Copied.";
-    setTimeout(() => (copyStatus.textContent = ""), 1400);
-  } catch (e) {
-    copyStatus.textContent = "Copy failed — email shown: " + HAWKLABS_EMAIL;
-    setTimeout(() => (copyStatus.textContent = ""), 2400);
+    if (copyStatus) {
+      copyStatus.textContent = "Copied.";
+      setTimeout(() => (copyStatus.textContent = ""), 1400);
+    }
+  } catch {
+    if (copyStatus) {
+      copyStatus.textContent = `Copy failed — email: ${HAWKLABS_EMAIL}`;
+      setTimeout(() => (copyStatus.textContent = ""), 2400);
+    }
   }
 });
+
+// Year
+if (year) year.textContent = String(new Date().getFullYear());
 
 // Updates signup -> Cloudflare Worker (/api/subscribe)
 const updatesForm = document.getElementById("updatesForm");
@@ -58,7 +62,7 @@ updatesForm?.addEventListener("submit", async (e) => {
   const email = String(new FormData(updatesForm).get("email") || "").trim();
   if (!email) return;
 
-  updatesStatus.textContent = "Sending…";
+  if (updatesStatus) updatesStatus.textContent = "Sending…";
 
   try {
     const res = await fetch("/api/subscribe", {
@@ -70,36 +74,11 @@ updatesForm?.addEventListener("submit", async (e) => {
     const data = await res.json().catch(() => ({}));
     if (!res.ok) throw new Error(data?.error || "Request failed");
 
-    updatesStatus.textContent = "You’re in. Check email for confirmation (if enabled).";
+    if (updatesStatus) {
+      updatesStatus.textContent = "You’re in. Check email for confirmation (if enabled).";
+    }
     updatesForm.reset();
-  } catch (err) {
-    updatesStatus.textContent = "Signup failed. Try again in a moment.";
+  } catch {
+    if (updatesStatus) updatesStatus.textContent = "Signup failed. Try again in a moment.";
   }
 });
-
-
-  // Mobile menu toggle
-  (function(){
-    const btn = document.getElementById('hlMenuBtn');
-    const nav = document.getElementById('hlNav');
-    if (!btn || !nav) return;
-
-    btn.addEventListener('click', () => {
-      const open = nav.classList.toggle('open');
-      btn.setAttribute('aria-expanded', open ? 'true' : 'false');
-      btn.textContent = open ? 'Close' : 'Menu';
-    });
-
-    nav.querySelectorAll('a').forEach(a => {
-      a.addEventListener('click', () => {
-        if (window.innerWidth <= 980) {
-          nav.classList.remove('open');
-          btn.setAttribute('aria-expanded', 'false');
-          btn.textContent = 'Menu';
-        }
-      });
-    });
-  }
-
-
-)

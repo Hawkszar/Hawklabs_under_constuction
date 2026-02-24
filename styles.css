@@ -1,9 +1,6 @@
-<!-- =========================
-HAW KLABS TOP NAV + HERO + HAWKLABS BRAND SECTION (DROP-IN)
-Uses section IDs: #universe, #lost-contact, #hawklabs, #contact
-========================= -->
 
-<style>
+
+
   :root{
     --bg:#070A10;
     --bg2:#0C111A;
@@ -535,8 +532,8 @@ Uses section IDs: #universe, #lost-contact, #hawklabs, #contact
     .hl-hero p{ font-size:.96rem; }
     .hl-btn{ width:100%; }
     .hl-brand-actions .hl-btn{ width:100%; }
-  }
-</style>
+  
+
 
   .hl-brand-name {
     font-size: 1.05rem;
@@ -549,4 +546,4 @@ Uses section IDs: #universe, #lost-contact, #hawklabs, #contact
   .hl-hero-cta .hl-btn {
     width: 100%;
   }
-}
+  }

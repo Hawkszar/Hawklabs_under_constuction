@@ -99,6 +99,6 @@ updatesForm?.addEventListener("submit", async (e) => {
         }
       });
     });
-  })();
-</script>
+  }
+
 if (year) year.textContent = String(new Date().getFullYear());

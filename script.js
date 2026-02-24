@@ -77,7 +77,7 @@ updatesForm?.addEventListener("submit", async (e) => {
   }
 });
 
-<script>
+
   // Mobile menu toggle
   (function(){
     const btn = document.getElementById('hlMenuBtn');
@@ -101,4 +101,5 @@ updatesForm?.addEventListener("submit", async (e) => {
     });
   }
 
-if (year) year.textContent = String(new Date().getFullYear());
+
+)

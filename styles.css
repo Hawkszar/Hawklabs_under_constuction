@@ -455,7 +455,7 @@
   max-height: 620px;      /* tweak: 420–600 depending on vibe */
   width: 100%;
   object-fit: cover;
-  object-position: center top; /* keeps the face/helmet framed */
+  object-position: center 15%; /* keeps the face/helmet framed */
 }
 
   .hl-asset-note{

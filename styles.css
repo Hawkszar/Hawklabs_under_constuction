@@ -452,18 +452,10 @@
    /* keep your existing styles, then add these */
 
 .hl-hero-card img{
-  max-height: 520px;      /* tweak: 420–600 depending on vibe */
+  max-height: 620px;      /* tweak: 420–600 depending on vibe */
   width: 100%;
   object-fit: cover;
   object-position: center top; /* keeps the face/helmet framed */
-}
-
-.hl-hero-card img{
-  aspect-ratio: 16 / 9;
-  width: 100%;
-  height: auto;
-  object-fit: cover;
-  object-position: center;
 }
 
   .hl-asset-note{

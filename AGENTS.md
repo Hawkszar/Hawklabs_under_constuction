@@ -3,10 +3,9 @@
 ## Project Identity
 Project name: Hawklabs - Website (Amber Command)
 Owner: Nicholas / Hawklabs  
-Purpose: hawklabs.games is our home base, our Domain. Needs to be updated regularly for the public to know what we are and what we are up to, as well as place for those
-who want to know more backstories aka LORE, thats where is will be dropped mainly
-Primary stack: cloudflair hotst and Git holds the files. withing seconds of Git finishing the push Cloudflair will pull new stuff and make it live
-Status: Live on the web. Gets auto uploaded to Cloudflair
+Purpose: hawklabs.games is our Domain website.
+Primary stack: cloudflair git hots files Cloudflairs Cloudflair will pull new stuff and make it live
+Status: Live on the web.
 
 ---
 
@@ -152,8 +151,3 @@ When communicating:
 ## Repo-Specific Commands
 Replace these with the real commands for this project.
 
-### Install
-```bash
-[TEST_COMMAND]
-[BUILD_COMMAND]
-[UPDATE]

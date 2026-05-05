@@ -3,52 +3,84 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Hawklabs — Lore Drops</title>
-  <meta name="description" content="Classified lore drops from the Birds of War universe." />
-  <style>
-    body{margin:0;font-family:system-ui,Segoe UI,Roboto,Arial;background:#0b0f14;color:#e9eef5}
-    .wrap{max-width:1100px;margin:0 auto;padding:28px}
-    .kicker{display:inline-flex;gap:10px;align-items:center;padding:6px 12px;border-radius:999px;background:#111a24;border:1px solid #1f2a38;color:#FF9F1A;font-weight:700}
-    h1{margin:14px 0 6px;font-size:40px}
-    p{opacity:.9;line-height:1.5}
-    .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px;margin-top:18px}
-    .card{background:#101823;border:1px solid #1f2a38;border-radius:16px;padding:16px}
-    .tag{display:inline-block;margin-top:8px;font-size:12px;letter-spacing:.08em;color:#FF9F1A}
-    a{color:inherit;text-decoration:none}
-    .btn{display:inline-block;margin-top:10px;padding:10px 12px;border-radius:12px;border:1px solid #1f2a38;background:#0f1620}
-    .btn:hover{border-color:#FF9F1A}
-    .footer{margin-top:28px;opacity:.75;font-size:14px}
-  </style>
+  <title>Hawklabs - Birds of War Lore Hub</title>
+  <meta name="description" content="Spoiler-safe Birds of War lore drops from Hawklabs." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/styles.css" />
 </head>
 <body>
-  <div class="wrap">
-    <div class="kicker">CLASSIFIED // LORE DROPS</div>
-    <h1>Lore Drops</h1>
-    <p>
-      Small intel packets from the <strong>Birds of War</strong> universe.
-    </p>
-
-    <div class="grid">
-      <!-- Drop #1 -->
-      <a class="card" href="/assets/peck-tripshot-card.png">
-        <div class="tag">DROP #001</div>
-        <h2 style="margin:10px 0 6px;">LT. Peck “Trip-Shot”</h2>
-        <p style="margin:0;opacity:.9;">
-          The day the noise became calm. Three shots. One instant. One new rhythm.
-        </p>
-        <div class="btn primary">Open Drop</div>
+  <header class="hl-topbar-wrap">
+    <div class="hl-topbar">
+      <a class="hl-brand" href="/" aria-label="Hawklabs home">
+        <span class="hl-brand-btn" aria-hidden="true"><img src="/assets/button_logo_brand.png" alt="" /></span>
+        <span class="hl-brand-text">
+          <span class="hl-brand-title">Hawklabs</span>
+          <span class="hl-brand-sub"><span class="dot"></span>LORE HUB</span>
+        </span>
       </a>
-
-      <!-- Future slot -->
-      <div class="card" style="opacity:.75;">
-        <div class="tag">NEXT DROP</div>
-        <h2 style="margin:10px 0 6px;">Incoming…</h2>
-        <p style="margin:0;">More intel soon. Stay sharp.</p>
-      </div>
+      <nav class="hl-nav" aria-label="Primary">
+        <a href="/">Home</a>
+        <a href="/#game">Lost Contact</a>
+        <a href="/#map">Map</a>
+        <a href="/#contact" class="is-cta">Updates</a>
+      </nav>
     </div>
+  </header>
 
-    
-    
-  </div>
+  <main>
+    <section class="hl-hero">
+      <div class="hl-hero-inner">
+        <div class="hl-hero-copy">
+          <div class="hl-kicker"><span class="amber-dot"></span>CLASSIFIED // PUBLIC FILES</div>
+          <h1>Birds of War<br /><span class="dim">Lore Hub</span></h1>
+          <p>
+            Spoiler-safe field files from the Birds of War universe. These drops explain
+            the world, factions, and demo setup without revealing the classified endgame.
+          </p>
+          <div class="hl-hero-actions">
+            <a class="hl-btn primary" href="/lore/lost-contact/">Start With Lost Contact</a>
+            <a class="hl-btn" href="/lore/known-territories/">Open the Map</a>
+          </div>
+        </div>
+        <aside class="hl-hero-card">
+          <img src="/assets/north_landscape.png" alt="Northern Territory landscape" />
+          <div class="meta">
+            <span class="hl-chip">Spoiler Safe</span>
+            <span class="hl-chip">Amber Command</span>
+            <span class="hl-chip">No Magic</span>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <section class="hl-section">
+      <div class="hl-section-head">
+        <p class="eyebrow">Read the files</p>
+        <h2>Lore Drops</h2>
+      </div>
+      <div class="hl-mini-grid hl-lore-grid">
+        <a class="hl-card" href="/lore/universe/">
+          <div class="caption"><strong>Universe Primer</strong><br />The core world, tone, and war-state setup.</div>
+        </a>
+        <a class="hl-card" href="/lore/commander-hawk/">
+          <div class="caption"><strong>Commander Hawk</strong><br />The principled operator cut off from command.</div>
+        </a>
+        <a class="hl-card" href="/lore/crow-threat/">
+          <div class="caption"><strong>The Crow Threat</strong><br />The West, undercities, El Hefe, and the Blitz.</div>
+        </a>
+        <a class="hl-card" href="/lore/the-drift/">
+          <div class="caption"><strong>The Drift</strong><br />Compass Kill and the science-weird South.</div>
+        </a>
+        <a class="hl-card" href="/lore/known-territories/">
+          <div class="caption"><strong>Known Territories</strong><br />A public-safe map of the war world.</div>
+        </a>
+        <a class="hl-card" href="/lore/lost-contact/">
+          <div class="caption"><strong>Lost Contact Demo Brief</strong><br />Build 1.5.3 status and mission setup.</div>
+        </a>
+      </div>
+    </section>
+  </main>
 </body>
 </html>

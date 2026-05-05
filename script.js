@@ -79,6 +79,7 @@ updatesForm?.addEventListener("submit", async (e) => {
     }
     updatesForm.reset();
   } catch {
-    if (updatesStatus) updatesStatus.textContent = "Signup failed. Try again in a moment.";
+    if (updatesStatus) updatesStatus.textContent = "Sending through fallback…";
+    updatesForm.submit();
   }
 });

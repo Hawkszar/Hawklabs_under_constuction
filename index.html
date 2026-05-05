@@ -4,10 +4,10 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <meta name="theme-color" content="#0A0C10" />
-  <title>Hawklabs — AMBER COMMAND</title>
+  <title>Hawklabs - Birds of War: Lost Contact</title>
   <meta
     name="description"
-    content="Hawklabs is building Birds of War — a modern avian military universe. Get the latest build drops, lore, and releases."
+    content="Hawklabs is building Birds of War, a stylized military action universe launching through Lost Contact, lore drops, games, and media."
   />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -18,29 +18,26 @@
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <!-- Top Nav -->
   <header class="hl-topbar-wrap">
     <div class="hl-topbar">
       <a class="hl-brand" href="#top" aria-label="Hawklabs home">
         <span class="hl-brand-btn" aria-hidden="true">
-          <!-- swap this to your small hawk logo when ready -->
-          <img src="assets/Button_Logo_Brand.png" alt="" onerror="this.style.display='none'; this.parentElement.textContent='HL';" />
+          <img src="assets/button_logo_brand.png" alt="" />
         </span>
         <span class="hl-brand-text">
-          <div class="hl-brand-title">Hawklabs</div>
-          <div class="hl-brand-sub"><span class="dot"></span>AMBER COMMAND</div>
+          <span class="hl-brand-title">Hawklabs</span>
+          <span class="hl-brand-sub"><span class="dot"></span>AMBER COMMAND</span>
         </span>
       </a>
 
-      <!-- Desktop Nav -->
       <nav class="hl-nav" aria-label="Primary">
+        <a href="#game">Lost Contact</a>
         <a href="#universe">Universe</a>
-        <a href="#game">Play</a>
-        <a href="#hawklabs">Hawklabs</a>
-        <a href="#contact" class="is-cta">Contact</a>
+        <a href="#map">Map</a>
+        <a href="/lore/">Lore</a>
+        <a href="#contact" class="is-cta">Updates</a>
       </nav>
 
-      <!-- Mobile Menu Button -->
       <button
         class="hl-menu-btn"
         id="navbtn"
@@ -48,291 +45,301 @@
         aria-label="Open menu"
         aria-expanded="false"
       >
-        ☰
+        MENU
       </button>
     </div>
 
-    <!-- Mobile Nav (JS toggles hidden attr) -->
     <nav class="hl-nav open" id="mobileNav" hidden aria-label="Mobile navigation">
+      <a href="#game">Lost Contact</a>
       <a href="#universe">Universe</a>
-      <a href="#game">Play</a>
-      <a href="#hawklabs">Hawklabs</a>
-      <a href="#contact" class="is-cta">Contact</a>
+      <a href="#map">Map</a>
+      <a href="/lore/">Lore</a>
+      <a href="#contact" class="is-cta">Updates</a>
     </nav>
   </header>
 
   <main id="top">
-    <!-- Warfeed / Live Ops -->
-    <section class="hl-warfeed" aria-label="Live operations">
+    <section class="hl-warfeed" aria-label="Build status">
       <div class="hl-warfeed-inner">
-        <span class="hl-warfeed-tag">LIVE</span>
-        <span class="hl-warfeed-text"><strong>BUILD v0.0.8</strong> — Blackout Update: Mission card + classified log feed + UI readability pass.</span>
-        <a class="hl-btn primary hl-warfeed-cta" href="https://youtu.be/Neox2KdepFM?si=veAXIGkG1eI2sr_r" target="_blank" rel="noopener">WATCH</a>
-        <a class="hl-btn hl-warfeed-cta" href="https://discord.gg/Pje6kHaK" target="_blank" rel="noopener">BRIEFING</a>
+        <span class="hl-warfeed-tag">BUILD 1.5.3</span>
+        <span class="hl-warfeed-text">
+          <strong>Lost Contact demo nearing completion</strong> - VFX, sound, flow polish, graphics pass, and level optimization underway.
+        </span>
+        <a class="hl-btn primary hl-warfeed-cta" href="https://youtu.be/Neox2KdepFM?si=veAXIGkG1eI2sr_r" target="_blank" rel="noopener">WATCH DEV FOOTAGE</a>
+        <a class="hl-btn hl-warfeed-cta" href="https://discord.gg/Pje6kHaK" target="_blank" rel="noopener">JOIN BRIEFING</a>
       </div>
     </section>
 
-    <!-- Hero -->
     <section class="hl-hero">
       <div class="hl-hero-inner">
-        <div>
+        <div class="hl-hero-copy">
           <div class="hl-kicker">
             <span class="amber-dot" aria-hidden="true"></span>
-            STORM ON THE HORIZON
+            SOUTH RECON // NO RESPONSE
           </div>
 
           <h1>
             Birds of War<br />
-            <span class="dim">AMBER COMMAND</span>
+            <span class="dim">Lost Contact</span>
           </h1>
 
           <p>
-            A modern avian near-utopia is shattered by a Crow invasion led by El Hefe.
-            Commander Hawk races home as the sky ignites.
+            Commander Hawk is deep in South recon when every channel goes silent.
+            No Drift. No storm. No excuse. Something has gone wrong in the North,
+            and unknown contacts are already moving to intercept.
           </p>
 
           <div class="hl-hero-actions">
-            <a class="hl-btn primary" href="https://youtu.be/Neox2KdepFM?si=veAXIGkG1eI2sr_r" target="_blank" rel="noopener">Watch / Play: Lost Contact</a>
+            <a class="hl-btn primary" href="#game">View Demo Status</a>
+            <a class="hl-btn" href="/lore/">Read the Lore</a>
             <a class="hl-btn" href="https://discord.gg/Pje6kHaK" target="_blank" rel="noopener">Join Discord</a>
-            <a class="hl-btn" href="https://www.youtube.com/@Hawklabs.Nicholas" target="_blank" rel="noopener">Watch Shorts</a>
             <a class="hl-btn" href="#contact">Get Build Drops</a>
           </div>
         </div>
 
-        <aside class="hl-hero-card" aria-label="Brand lock summary">
+        <aside class="hl-hero-card" aria-label="Lost Contact key visual">
           <img
-            src="assets/hero_fortress.png"
-            alt="Birds of War storm sky invasion omen artwork"
+            src="assets/lost_contact_compass_logo.png"
+            alt="Lost Contact compass logo"
             loading="eager"
-            onerror="this.style.display='none';"
           />
-
           <div class="meta">
-            <span class="hl-chip">⚡ No Magic</span>
-            <span class="hl-chip">🛡 Readability First</span>
-            <span class="hl-chip">🎯 Stylized Military Action</span>
-            <span class="hl-chip">🟠 AMBER COMMAND</span>
+            <span class="hl-chip">No Magic</span>
+            <span class="hl-chip">Readability First</span>
+            <span class="hl-chip">Air Combat Demo</span>
+            <span class="hl-chip">Amber Command</span>
           </div>
         </aside>
       </div>
     </section>
 
-    <!-- Universe -->
+    <section class="hl-section hl-split" id="game">
+      <div class="hl-copy-block">
+        <div class="hl-section-head">
+          <p class="eyebrow">Playable first strike</p>
+          <h2>Lost Contact Demo</h2>
+        </div>
+        <p class="sub">
+          A vertical-scrolling air combat demo built around speed, clean reads,
+          escalating Crow contact, and Commander Hawk's race back north.
+        </p>
+
+        <div class="hl-status-panel">
+          <div>
+            <span class="hl-status-label">Current Build</span>
+            <strong>1.5.3</strong>
+          </div>
+          <div>
+            <span class="hl-status-label">Level 1 / Demo</span>
+            <strong>Final Polish</strong>
+          </div>
+          <div>
+            <span class="hl-status-label">Public Brief</span>
+            <strong>Classified Endgame</strong>
+          </div>
+        </div>
+
+        <div class="hl-mini-grid hl-feature-grid">
+          <article class="hl-card">
+            <div class="caption">
+              <strong>In Progress</strong><br />
+              VFX, sound, final graphics polish, tighter game flow, and level optimization.
+            </div>
+          </article>
+          <article class="hl-card">
+            <div class="caption">
+              <strong>Mission Brief</strong><br />
+              Hawk has lost contact with HQ. Unknown Crow forces stand between him and the North.
+            </div>
+          </article>
+          <article class="hl-card">
+            <div class="caption">
+              <strong>Gameplay Focus</strong><br />
+              Air-to-air combat, Crow wave pressure, boss encounters, and Adrenal Flush timing.
+            </div>
+          </article>
+          <article class="hl-card">
+            <div class="caption">
+              <strong>Spoiler Guard</strong><br />
+              The final encounter and what follows stay classified until players reach it.
+            </div>
+          </article>
+        </div>
+
+        <div class="hl-brand-actions">
+          <a class="hl-btn primary" href="https://youtu.be/Neox2KdepFM?si=veAXIGkG1eI2sr_r" target="_blank" rel="noopener">Watch Gameplay</a>
+          <a class="hl-btn" href="#contact">Get Demo Access Updates</a>
+        </div>
+      </div>
+
+      <div class="hl-visual-stack">
+        <article class="hl-card hl-media-card">
+          <img src="assets/commander_hawk_boost.png" alt="Commander Hawk boosting north" loading="lazy" />
+          <div class="caption">
+            <strong>Commander Hawk</strong> - classified flight tech, amber thrust, and one route home.
+          </div>
+        </article>
+      </div>
+    </section>
+
     <section class="hl-section" id="universe">
       <div class="hl-section-head">
+        <p class="eyebrow">The IP spine</p>
         <h2>Universe Snapshot</h2>
       </div>
       <p class="sub">
-        Borders fail. Comms go dark. Invasion succeeds through underground access and complacency decay.
+        Birds of War is a stylized military action universe: games, shorts, lore drops,
+        and future media all linked back to one canon.
       </p>
 
-      <div class="hl-mini-grid" style="margin-top:14px;">
+      <div class="hl-mini-grid hl-lore-grid">
         <article class="hl-card">
+          <img src="assets/north_landscape.png" alt="Northern Territory green homeland landscape" loading="lazy" />
           <div class="caption">
-            <strong>The North (Hawk Homeland)</strong><br />
-            Near-utopian nature-tech harmony. Disciplined but humane. Hawks are principled, not naive.
+            <strong>The North</strong><br />
+            Hawk homeland. Clean power, nature-tech harmony, farms, forests, mountains, and strongholds.
           </div>
         </article>
 
         <article class="hl-card">
           <div class="caption">
-            <strong>The West (Crow Undercities)</strong><br />
-            Depleted surface, massive under-network. Crows are brutal, not mindless — united by El Hefe.
+            <strong>The West</strong><br />
+            Crow homeland. Depleted surface, hidden undercities, dirty fuel, and a united revenge machine.
           </div>
         </article>
 
         <article class="hl-card">
           <div class="caption">
-            <strong>The Cutoff</strong><br />
-            Home signal: none. Civil net: silence. Secure channel: dead.
+            <strong>The Drift</strong><br />
+            A roaming magnetic anomaly that causes Compass Kill, bad routes, false confidence, and dead channels.
           </div>
         </article>
 
         <article class="hl-card">
           <div class="caption">
             <strong>Commander Hawk</strong><br />
-            Enhanced operator. Squad lead. Honorable to the core. Carrying secrets tied to black-ops history.
+            Principled, enhanced, and cut off from command. His advantage is clarity under pressure.
           </div>
         </article>
       </div>
+
+      <div class="hl-brand-actions">
+        <a class="hl-btn primary" href="/lore/">Open Lore Hub</a>
+        <a class="hl-btn" href="/lore/lost-contact/">Lost Contact Brief</a>
+        <a class="hl-btn" href="/lore/the-drift/">The Drift</a>
+      </div>
     </section>
 
-    <!-- Game -->
-<section class="hl-section" id="game">
-  <div class="hl-section-head">
-    <h2>Game: Lost Contact</h2>
-  </div>
-
-  <p class="sub">
-    Vertical-scroller air-to-air combat. Fast missions. Clean reads. Real stakes.
-  </p>
-
-  <div class="hl-visual-stack" style="margin-top:14px;">
-
-    <!-- HERO / big card -->
-    <div class="hl-card hl-hero-card">
-      <img src="assets/Brand_Lock_CMD_HAWK_front.png"
-           alt="Commander Hawk key art" loading="lazy" />
-      <div class="caption">
-        <strong>Commander Hawk</strong> — Enhanced operator and squad lead — the only one still capable of sustained flight. Get home. Break the intercept. Survive.
-      </div>
-    </div>
-
-    <!-- two-up grid -->
-    <div class="hl-mini-grid">
-
-      <div class="hl-card">
-        <img src="assets/The_crows_pose.png"
-             alt="Lost Contact Crows" loading="lazy" />
-        <div class="caption">
-          <strong>Crows invasion</strong> — Adaptive strike flocks — fast, ruthless, coordinated. United by El Hefe.
+    <section class="hl-section hl-split" id="map">
+      <div class="hl-copy-block">
+        <div class="hl-section-head">
+          <p class="eyebrow">Known territories</p>
+          <h2>Map of the War World</h2>
         </div>
-      </div>
+        <p class="sub">
+          The public map shows the known world without campaign spoilers: Hawk North,
+          Crow West, trade routes east, and the dangerous South where navigation can betray you.
+        </p>
 
-      <div class="hl-card">
-        <img src="assets/Diffrentlogos.png"
-             alt="Lost Contact UI / logos" loading="lazy" />
-        <div class="caption">
-          <strong>Full Function Interface</strong> — Leaves time and option menus etc to add replayable value.
-        </div>
-      </div>
-
-    </div>
-
-    <!-- supporting text OUTSIDE the grid -->
-    <p class="sub">Clean readability and mission-state clarity.</p>
-    <p class="sub">Consequence-driven reset screen.</p>
-
-    
-    <div class="hl-card" style="margin-top:12px;">
-      <div class="caption">
-        <strong>Play Lost Contact</strong><br />
-        60–90s runs. Score chase. Clean mission reads.
-        <div class="hl-brand-actions" style="margin-top:12px;">
-          <a class="hl-btn primary" id="playBtn" href="https://youtu.be/Neox2KdepFM?si=veAXIGkG1eI2sr_r" target="_blank" rel="noopener">WATCH GAMEPLAY</a>
-          <a class="hl-btn" id="downloadBtn" href="#contact">DOWNLOAD / GET ACCESS</a>
-        </div>
-        <div class="hl-play-note">Tip: Web play is coming. Enlist for the next build drop (and get the playable link first).</div>
-      </div>
-    </div>
-
-
-    <div class="hl-brand-actions">
-      <a class="hl-btn primary" href="#contact">Join the Launch List</a
-      <a class="hl-btn" href="#hawklabs">About Hawklabs</a>
-    </div>
-
-  </div>
-</section>
-
-    <!-- Hawklabs Brand / Umbrella -->
-    <section class="hl-section" id="hawklabs">
-      <div class="hl-section-head">
-        <h2>About Hawklabs</h2>
-      </div>
-      <p class="sub">
-        Hawklabs is the studio umbrella for games, shorts, lore drops, and future IP expansion in the Birds of War universe.
-      </p>
-
-      <div class="hl-brand-umbrella" style="margin-top:14px;">
-        <div class="hl-brand-grid">
-
-
-          <div class="hl-brand-copy">
-            <div class="hl-brand-badge">🟠 Where Code Takes Flight</div>
-
-            <p>
-              <strong>Hawklabs</strong> is a family-built creative strike team focused on respectful collaboration,
-              iconic silhouettes, and gameplay-first proof.
-            </p>
-
-            <p>
-              We ship playable progress early, then scale outward with story, characters, worldbuilding,
-              and franchise-level threats.
-            </p>
-
-            <div class="hl-pill-row">
-              <span class="hl-pill">Games</span>
-              <span class="hl-pill">Cinematics</span>
-              <span class="hl-pill">Lore Drops</span>
-              <span class="hl-pill">Worldbuilding</span>
-              <span class="hl-pill">Merch-Ready Identity</span>
-            </div>
-
-            <div class="hl-ladder" aria-label="Hawklabs mission ladder">
-              <div class="hl-ladder-row">
-                <div class="label">Now</div>
-                <div class="desc">Lost Contact gameplay, polish, web presence, and audience build.</div>
-              </div>
-              <div class="hl-ladder-row">
-                <div class="label">Next</div>
-                <div class="desc">Short videos, character lockups, stronger lore reveals, and media drops.</div>
-              </div>
-              <div class="hl-ladder-row">
-                <div class="label">Later</div>
-                <div class="desc">Expanded Birds of War titles, connected story arcs, and franchise-level scale.</div>
-              </div>
-            </div>
-
-            <div class="hl-brand-actions">
-              <a class="hl-btn primary" href="#contact">Get Updates</a>
-              <a class="hl-btn" href="#game">See Lost Contact</a>
-              <a class="hl-btn" href="/lore/index.html">Lore Drops</a>
-            </div>
-          </div> 
-
-          <div class="hl-visual-stack">
-            <div class="hl-card">
-              <img src="assets/hero_fortress.png" alt="Birds of War storm horizon scene" loading="lazy" />
-              <div class="caption"><strong>Invasion Omen</strong> — the sky ignites before the homeland knows what’s coming.</div>
-            </div>
-
-            <div class="hl-mini-grid">
-              <div class="hl-card">
-                <img src="assets/c_hinga.png" alt="Lost Contact menu art" loading="lazy" />
-                <div class="caption">Game-facing presentation pass.</div>
-              </div>
-              <div class="hl-card">
-                <img src="assets/Hawklabs_Nameplae_logo.png" alt="Lost Contact pause art" loading="lazy" />
-                <div class="caption">Interface and atmosphere alignment.</div>
-              </div>
-            </div> 
-            <div class="hl-asset-note">
-              Brand rule: amber for hero moments, red for danger, storm blues/greys for world-state and tension.
-            </div>
+        <div class="hl-ladder">
+          <div class="hl-ladder-row">
+            <div class="label">North</div>
+            <div class="desc">Hawk homeland and the emotional center of Lost Contact.</div>
+          </div>
+          <div class="hl-ladder-row">
+            <div class="label">West</div>
+            <div class="desc">Crow territory, wasteland surface, and undercity power.</div>
+          </div>
+          <div class="hl-ladder-row">
+            <div class="label">East</div>
+            <div class="desc">Flightless nations and trade partners, not automatic allies.</div>
+          </div>
+          <div class="hl-ladder-row">
+            <div class="label">South</div>
+            <div class="desc">Unmapped anomaly zone: The Drift, Compass Kill, and recon uncertainty.</div>
           </div>
         </div>
-      </div>    
+      </div>
+
+      <article class="hl-card hl-map-card">
+        <img src="assets/bow_known_territories_map.png" alt="Simple Birds of War known territories map" loading="lazy" />
+        <div class="caption">
+          <strong>Public Cartography</strong> - map detail will expand as lore drops unlock more of the world.
+        </div>
+      </article>
     </section>
 
-    <!-- Contact / Updates -->
+    <section class="hl-section hl-split" id="hawklabs">
+      <div class="hl-copy-block">
+        <div class="hl-section-head">
+          <p class="eyebrow">Where code takes flight</p>
+          <h2>About Hawklabs</h2>
+        </div>
+        <p class="sub">
+          Hawklabs is building Birds of War as a connected IP universe, starting with
+          focused games and expanding through lore, shorts, media drops, and character-driven worldbuilding.
+        </p>
+
+        <div class="hl-pill-row">
+          <span class="hl-pill">Games</span>
+          <span class="hl-pill">Lore Drops</span>
+          <span class="hl-pill">Shorts</span>
+          <span class="hl-pill">Worldbuilding</span>
+          <span class="hl-pill">Amber Command</span>
+        </div>
+
+        <div class="hl-ladder">
+          <div class="hl-ladder-row">
+            <div class="label">Now</div>
+            <div class="desc">Finish the Lost Contact demo polish pass and strengthen the public home base.</div>
+          </div>
+          <div class="hl-ladder-row">
+            <div class="label">Next</div>
+            <div class="desc">Release stronger lore drops, gameplay clips, and character/world briefs.</div>
+          </div>
+          <div class="hl-ladder-row">
+            <div class="label">Later</div>
+            <div class="desc">Expand Birds of War into connected games, shorts, and franchise-scale media.</div>
+          </div>
+        </div>
+      </div>
+
+      <article class="hl-card hl-badge-card">
+        <img src="assets/badge_of_hawks.png" alt="Badge of Hawks" loading="lazy" />
+        <div class="caption">
+          <strong>Brand Law</strong><br />
+          Amber belongs to Hawk. Red belongs to danger. Blue belongs to the world.
+        </div>
+      </article>
+    </section>
+
     <section class="hl-section" id="contact">
       <div class="hl-section-head">
+        <p class="eyebrow">Build drops</p>
         <h2>Contact &amp; Updates</h2>
       </div>
       <p class="sub">
-        Drop your email for build drops and lore. Or hit the direct email button.
+        Join the launch list for demo updates, lore drops, and release signals.
       </p>
 
-      <div class="hl-mini-grid" style="margin-top:14px;">
+      <div class="hl-mini-grid">
         <div class="hl-card">
           <div class="caption">
             <strong>Email Hawklabs</strong><br />
             Opens your mail app with a prefilled subject line.
-            <div class="hl-brand-actions" style="margin-top:12px;">
+            <div class="hl-brand-actions">
               <a class="hl-btn primary" id="emailBtn" href="#">Email Hawklabs</a>
               <button class="hl-btn" id="copyEmailBtn" type="button">Copy Email</button>
             </div>
-            <div style="margin-top:8px; color: var(--muted); font-size: .85rem;" id="copyStatus" role="status" aria-live="polite"></div>
+            <div class="hl-form-note" id="copyStatus" role="status" aria-live="polite"></div>
           </div>
         </div>
 
         <div class="hl-card">
           <div class="caption">
             <strong>Join the Launch List</strong><br />
-            Build drops, lore updates, and release signals.
+            Build drops, lore updates, and demo access signals.
 
-            <!-- Keep this form for Netlify OR temporary fallback -->
             <form
               id="updatesForm"
               name="updates"
@@ -340,40 +347,28 @@
               data-netlify="true"
               action="/thanks.html"
               netlify-honeypot="bot-field"
-              style="margin-top:12px;"
+              class="hl-form"
             >
               <input type="hidden" name="form-name" value="updates" />
-
-              <p style="display:none;">
-                <label>Don’t fill this out: <input name="bot-field" /></label>
+              <p class="hl-honeypot">
+                <label>Do not fill this out: <input name="bot-field" /></label>
               </p>
-
-              <label style="display:block;">
-                <span style="position:absolute;left:-9999px;">Email</span>
-                <input
-                  type="email"
-                  name="email"
-                  placeholder="you@domain.com"
-                  required
-                  style="width:100%;padding:11px 12px;border-radius:12px;border:1px solid rgba(255,255,255,.12);background:rgba(255,255,255,.03);color:var(--text);"
-                />
+              <label>
+                <span class="sr-only">Email</span>
+                <input type="email" name="email" placeholder="you@domain.com" required />
               </label>
-
-              <div class="hl-brand-actions" style="margin-top:10px;">
+              <div class="hl-brand-actions">
                 <button class="hl-btn primary" type="submit">ENLIST</button>
               </div>
-
-              <div id="updatesStatus" role="status" aria-live="polite" style="margin-top:8px;color:var(--muted);font-size:.85rem;"></div>
+              <div id="updatesStatus" role="status" aria-live="polite" class="hl-form-note"></div>
             </form>
           </div>
         </div>
       </div>
 
-      <footer
-        style="margin-top:20px;padding-top:14px;border-top:1px solid rgba(255,255,255,.08);display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;color:var(--muted);"
-      >
-        <div>© <span id="year"></span> Hawklabs. All rights reserved.</div>
-        <div><a href="#top" style="color:var(--text);text-decoration:none;">Back to top ↑</a></div>
+      <footer class="hl-footer">
+        <div>&copy; <span id="year"></span> Hawklabs. All rights reserved.</div>
+        <div><a href="#top">Back to top</a></div>
       </footer>
     </section>
   </main>

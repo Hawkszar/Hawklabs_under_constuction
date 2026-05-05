@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>LT. Peck \u2014 \u201cTrip-Shot\u201d</title>
+  <meta name="description" content="LT. Peck 'Trip-Shot' \u2014 the day the noise became calm." />
+  <style>
+    body{margin:0;font-family:system-ui,Segoe UI,Roboto,Arial;background:#0b0f14;color:#e9eef5}
+    .wrap{max-width:980px;margin:0 auto;padding:26px}
+    .kicker{display:inline-flex;gap:10px;align-items:center;padding:6px 12px;border-radius:999px;background:#111a24;border:1px solid #1f2a38;color:#FF9F1A;font-weight:800;letter-spacing:.08em}
+    h1{margin:14px 0 6px;font-size:42px}
+    .sub{opacity:.9;margin:0 0 14px}
+    .card{background:#101823;border:1px solid #1f2a38;border-radius:18px;padding:16px}
+    img{max-width:100%;border-radius:14px;border:1px solid #1f2a38}
+    .hr{height:1px;background:#1f2a38;margin:16px 0}
+    .btnrow{display:flex;gap:10px;flex-wrap:wrap;margin-top:10px}
+    .btn{display:inline-block;padding:12px 14px;border-radius:12px;border:1px solid #1f2a38;background:#0f1620;color:#e9eef5;text-decoration:none;font-weight:800}
+    .btn.primary{background:#FF9F1A;color:#111;border-color:#FF9F1A}
+    .btn:hover{opacity:.92}
+    .popup{display:none;margin-top:14px;padding:14px;border:1px solid #FF9F1A;border-radius:12px;background:#0f1620}
+    .popup .title{font-weight:900;letter-spacing:.12em}
+    .popup a{color:#FF9F1A}
+    .small{opacity:.8;font-size:14px}
+    .quote{margin:0;padding:12px 14px;border-left:3px solid #FF9F1A;background:#0f1620;border-radius:10px}
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="kicker">DROP #001 // CLASSIFIED</div>
+    <h1>LT. Peck <span style="color:#FF9F1A;">\u201cTrip-Shot\u201d</span></h1>
+    <p class="sub"><em>The day the noise became calm.</em></p>
+
+    <div class="card">
+      <!-- TODO: update the src path to your actual image -->
+      <img src="/assets/peck-tripshot-card.png" alt="Lt. Peck Trip-Shot" />
+
+      <div class="hr"></div>
+
+      <p class="quote">
+        Three shots. One instant. One fall. One new rhythm.<br/>
+        After Hell Week, Peck never heard panic in his heartbeat again.
+      </p>
+
+      <div class="btnrow">
+        <button id="downloadJournal" class="btn primary">Download Peck\u2019s Field Journal (PDF)</button>
+        <a class="btn" href="/lore/">Back to Lore Drops</a>
+      </div>
+
+      <div id="eggPopup" class="popup">
+        <div class="title">CLASSIFIED UNLOCKED</div>
+        <div style="margin-top:8px;">You triggered a hidden drop.</div>
+        <div class="small" style="margin-top:6px;">Claim it now before it disappears.</div>
+        <a id="claimLink" href="#" style="display:inline-block;margin-top:10px;">Claim bonus file</a>
+      </div>
+
+      <div class="small" style="margin-top:14px;">
+        Note: Some downloads trigger a classified bonus file. If it happens\u2026 you\u2019ll know.
+      </div>
+    </div>
+
+    <script>
+      const btn = document.getElementById('downloadJournal');
+      const popup = document.getElementById('eggPopup');
+      const claimLink = document.getElementById('claimLink');
+
+      btn.addEventListener('click', async () => {
+        try {
+          const r = await fetch('/api/egg/trip-shot/download', { method:'POST' });
+          const data = await r.json();
+
+          if (data.winner && data.claimUrl) {
+            claimLink.href = data.claimUrl;
+            popup.style.display = 'block';
+          }
+        } catch (e) {}
+
+        // Make sure this PDF exists at this exact path:
+        window.location.href = '/lore/trip-shot/journal.pdf';
+      });
+    </script>
+  </div>
+</body>
+</html>

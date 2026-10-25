@@ -680,3 +680,44 @@ a {
 #projects .hl-media-card .caption { min-height: 230px; }
 #vision { padding-top: 24px; }
 @media (max-width: 900px) { .hl-topbar-wrap > .hl-nav:not([hidden]) { display: flex; } }
+
+/* FUTURISTIC STUDIO IDENTITY — enhancement layer */
+body {background:radial-gradient(ellipse at 70% 1%,rgba(34,96,132,.14),transparent 44%),linear-gradient(180deg,#050810,#0c121d 45%,#070a10);}
+.hl-hero {background:radial-gradient(ellipse at 75% 45%,rgba(20,105,150,.20),transparent 48%),radial-gradient(ellipse at 5% 35%,rgba(255,159,26,.095),transparent 52%),#070c15;}
+.hl-hero-inner {padding-top:76px;padding-bottom:76px;gap:48px;}
+.hl-hero h1 {letter-spacing:-.035em;line-height:1.08;}
+.hl-hero h1 .dim {font-size:clamp(1.55rem,3.1vw,2.9rem);color:#ffba54;line-height:1.28;letter-spacing:-.02em;}
+.hl-kicker {color:#8ccae4;}
+.hl-tech-hero {min-height:360px;padding:24px;position:relative;display:flex;flex-direction:column;justify-content:space-between;isolation:isolate;background:linear-gradient(135deg,rgba(16,32,48,.96),rgba(6,11,20,.98));border-color:rgba(106,170,208,.29);}
+.hl-tech-hero:before {content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(rgba(105,186,231,.07) 1px,transparent 1px),linear-gradient(90deg,rgba(105,186,231,.07) 1px,transparent 1px);background-size:30px 30px;mask-image:radial-gradient(ellipse,black,transparent 75%);}
+.hl-blueprint-head,.hl-blueprint-foot {display:flex;justify-content:space-between;gap:8px;flex-wrap:wrap;color:#8fb7cd;font:700 .68rem Inter,sans-serif;letter-spacing:.16em;}
+.hl-blueprint-foot {color:#ffbf69;}
+.hl-signal {color:#80d5b5;}
+.hl-orbit-scene {height:260px;display:grid;place-items:center;position:relative;}
+.hl-orbit {position:absolute;left:50%;top:50%;transform:translate(-50%,-50%) rotate(-22deg);border:1px solid rgba(116,199,247,.35);border-radius:50%;}
+.hl-orbit.o1 {width:155px;height:155px;border-color:#ffab40;box-shadow:0 0 45px rgba(255,159,26,.09);}
+.hl-orbit.o2 {width:260px;height:180px;transform:translate(-50%,-50%) rotate(35deg);}
+.hl-orbit.o3 {width:300px;height:130px;transform:translate(-50%,-50%) rotate(-35deg);}
+.hl-core {width:116px;height:116px;border-radius:25px;transform:rotate(-8deg);display:grid;place-content:center;text-align:center;border:1px solid #edaa50;box-shadow:0 0 35px rgba(255,159,26,.24),inset 0 0 30px rgba(28,92,129,.17);background:#0a1523;}
+.hl-core span {font:700 3.4rem Orbitron,sans-serif;color:#f9c478;}
+.hl-core small {font-size:.42rem;letter-spacing:.15em;color:#8ccae4;}
+.hl-node {position:absolute;width:9px;height:9px;border-radius:50%;background:#68cfff;box-shadow:0 0 16px #60bdeb;}
+.hl-node.n1 {left:17%;top:30%}.hl-node.n2 {right:14%;top:62%;background:#ffae4d}.hl-node.n3 {left:44%;bottom:7%}
+#work .hl-card {background:linear-gradient(145deg,rgba(23,38,53,.92),rgba(9,14,24,.96));border:1px solid rgba(100,165,200,.16);box-shadow:none;transition:transform .2s,border-color .2s;}
+#work .hl-card:hover {transform:translateY(-3px);border-color:rgba(255,159,26,.45);}
+#work .caption strong {font-family:Orbitron,sans-serif;font-size:1.05rem;}
+.hl-gopher-visual {min-height:260px;position:relative;display:grid;place-items:center;overflow:hidden;background:radial-gradient(circle at 50%,rgba(243,159,49,.22),transparent 45%),repeating-linear-gradient(0deg,transparent 0 30px,rgba(76,143,189,.07) 31px),repeating-linear-gradient(90deg,transparent 0 30px,rgba(76,143,189,.07) 31px),#081321;}
+.hl-gopher-gear {position:absolute;left:50%;top:47%;transform:translate(-50%,-50%);font-size:180px;line-height:1;color:rgba(119,186,226,.18);text-shadow:0 0 38px rgba(44,151,214,.20);}
+.hl-product-label {position:relative;text-align:center;text-shadow:0 2px 12px #02060a;}
+.hl-product-label b {display:block;font:700 clamp(1.8rem,3vw,2.5rem) Orbitron,sans-serif;color:#dceef8;letter-spacing:-.05em;}
+.hl-product-label b span {color:#ffaf47;}
+.hl-product-label small {display:block;margin-top:12px;letter-spacing:.22em;color:#a9c8da;font-size:.62rem;}
+.hl-philosophy-visual {padding:0;align-self:stretch;text-align:center;}
+.hl-philo-art {height:290px;position:relative;display:grid;place-items:center;overflow:hidden;background:radial-gradient(ellipse at center,rgba(232,153,46,.21),transparent 53%),#071523;}
+.hl-philo-grid {position:absolute;inset:0;background:linear-gradient(rgba(106,191,230,.08) 1px,transparent 1px),linear-gradient(90deg,rgba(106,191,230,.08) 1px,transparent 1px);background-size:25px 25px;transform:perspective(350px) rotateX(25deg) scale(1.5);}
+.hl-philo-wing {font-size:11rem;position:relative;color:#ffb453;text-shadow:0 0 55px rgba(255,152,29,.6);}
+.hl-philo-label {position:absolute;bottom:20px;color:#b8d8e7;letter-spacing:.12em;font-size:.71rem;font-weight:800;}
+.hl-philo-label span {color:#fbae4a;padding:0 8px;}
+.hl-philosophy-visual .caption {background:#0c1724;}
+@media(max-width:900px){.hl-hero-inner{padding-top:40px;padding-bottom:45px}.hl-tech-hero{min-height:320px}}
+@media(prefers-reduced-motion:reduce){.hl-btn,#work .hl-card{transition:none}}

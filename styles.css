@@ -721,3 +721,12 @@ body {background:radial-gradient(ellipse at 70% 1%,rgba(34,96,132,.14),transpare
 .hl-philosophy-visual .caption {background:#0c1724;}
 @media(max-width:900px){.hl-hero-inner{padding-top:40px;padding-bottom:45px}.hl-tech-hero{min-height:320px}}
 @media(prefers-reduced-motion:reduce){.hl-btn,#work .hl-card{transition:none}}
+
+/* Cinematic imagery layers: safe fallback to current CSS artwork until PNG assets are uploaded */
+.hl-tech-hero {overflow:hidden}
+.hl-cinematic-hero {position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.52;z-index:-1;filter:saturate(.9)}
+.hl-tech-hero:has(.hl-cinematic-hero:not([hidden])) .hl-orbit-scene {opacity:.45}
+.hl-gopher-logo {position:absolute;inset:0;width:100%;height:100%;object-fit:contain;padding:14px;background:#081321;z-index:2}
+.hl-product-preview {display:block;width:100%;height:auto;aspect-ratio:16/9;object-fit:cover;border-radius:10px;margin-bottom:14px}
+.hl-philo-cinematic {position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:2}
+.hl-philo-art:has(.hl-philo-cinematic:not([hidden])) .hl-philo-label {z-index:3;background:rgba(5,10,18,.82);padding:9px 14px;border-radius:8px}

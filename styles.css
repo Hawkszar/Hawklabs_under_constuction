@@ -667,3 +667,16 @@ a {
     align-items: stretch;
   }
 }
+
+/* HawkLabs studio homepage refinements */
+[hidden] { display: none !important; }
+.hl-hero h1 { line-height: 1.08; }
+.hl-hero h1 .dim { display: inline-block; margin-top: .18em; font-size: clamp(1.4rem, 3vw, 2.65rem); color: #ffd08a; }
+.hl-hero-card img { max-height: 340px; object-fit: contain; }
+#work .hl-card { border-top: 2px solid rgba(255,159,26,.42); }
+#work .caption, #projects .caption { min-height: 150px; }
+#work .caption p, #projects .caption p, #vision .caption p, #contact .caption p { color: var(--muted); line-height: 1.65; }
+#projects .hl-media-card img { height: 230px; aspect-ratio: auto; object-fit: contain; padding: 16px; }
+#projects .hl-media-card .caption { min-height: 230px; }
+#vision { padding-top: 24px; }
+@media (max-width: 900px) { .hl-topbar-wrap > .hl-nav:not([hidden]) { display: flex; } }

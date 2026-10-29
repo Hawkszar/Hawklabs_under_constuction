@@ -723,7 +723,7 @@ body {background:radial-gradient(ellipse at 70% 1%,rgba(34,96,132,.14),transpare
 @media(prefers-reduced-motion:reduce){.hl-btn,#work .hl-card{transition:none}}
 
 /* HawkLabs crew: an introduction after Contact, before the footer. */
-.hl-team-grid {display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:22px;margin-top:28px;}
+.hl-team-grid {display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px;max-width:900px;margin:28px auto 0;}
 .hl-team-card {min-width:0;overflow:hidden;}
 .hl-team-card > img {display:block;width:100%;height:auto;aspect-ratio:1;object-fit:cover;}
 .hl-team-card h3 {margin:0;font-size:1.45rem;color:var(--text,#e8edf5);}

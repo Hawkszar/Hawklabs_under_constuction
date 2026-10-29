@@ -721,3 +721,18 @@ body {background:radial-gradient(ellipse at 70% 1%,rgba(34,96,132,.14),transpare
 .hl-philosophy-visual .caption {background:#0c1724;}
 @media(max-width:900px){.hl-hero-inner{padding-top:40px;padding-bottom:45px}.hl-tech-hero{min-height:320px}}
 @media(prefers-reduced-motion:reduce){.hl-btn,#work .hl-card{transition:none}}
+
+/* HawkLabs crew: an introduction after Contact, before the footer. */
+.hl-team-grid {display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:22px;margin-top:28px;}
+.hl-team-card {min-width:0;overflow:hidden;}
+.hl-team-card > img {display:block;width:100%;height:auto;aspect-ratio:1;object-fit:cover;}
+.hl-team-card h3 {margin:0;font-size:1.45rem;color:var(--text,#e8edf5);}
+.hl-team-card .caption p {color:var(--muted,#a8b4c5);line-height:1.65;}
+.hl-team-card .caption .hl-team-role {color:#ffd08a;font-size:.82rem;font-weight:700;line-height:1.5;min-height:2.5em;}
+.hl-team-ethos {margin-top:28px;padding:25px 28px;border:1px solid rgba(255,183,67,.2);border-radius:16px;background:linear-gradient(135deg,#111923,#090e16);}
+.hl-team-ethos h3 {margin:0 0 10px;}
+.hl-team-ethos p {color:var(--muted,#a8b4c5);line-height:1.7;margin:0;max-width:75ch;}
+.hl-team-ethos blockquote {margin:20px 0 0;color:#ffd08a;font-size:1.1rem;}
+.hl-team-ethos cite {display:block;margin-top:8px;color:var(--muted,#a8b4c5);font-style:normal;font-size:.85rem;}
+.hl-team-note {color:var(--muted,#a8b4c5);font-size:.78rem;line-height:1.6;margin:18px 0 0;}
+@media(max-width:760px){.hl-team-grid{grid-template-columns:1fr;gap:24px}.hl-team-card > img{max-height:none}.hl-team-card .caption .hl-team-role{min-height:0}.hl-team-ethos{padding:22px}}
